@@ -50,3 +50,12 @@ people = [Person("Tom", 23), Student("Bob", 19, "Harvard"), Employee("Sam", 35, 
 for person in people:
     person.display_info()
     print()
+
+for person in people:
+    if isinstance(person, Student):
+        print(person.university)
+    elif isinstance(person, Employee):
+        print(person.company)
+    else:
+        print(person.name)
+    print()
